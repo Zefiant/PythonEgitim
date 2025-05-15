@@ -1,7 +1,7 @@
 #Kullanıcı, çalıştırmak istediği programı seçer
 secilenOdev = input(
 """Lütfen ödev numarası seçiniz:
-1.Hesap Makinesi
+1.Matematik İşlemleri
 2.Gauss Toplamı
 3.Çift Sayılar
 4.Metin Çevirme
@@ -16,42 +16,25 @@ if secilenOdev == "1" or secilenOdev == "1.":
     # Mod alma (%)
     # Üs alma (** )
 
-    #Yapılacak işlem seçilir
-    yapilacakIslem = input(
-"""Lütfen yapılacak işlemi seçiniz:
-1. Toplama
-2. Çıkarma
-3. Çarpma
-4. Bölme
-5. Mod alma
-6. Üs alma
-Seçiminiz: """
-    )
     #Kullanıcıdan sayılar alınır
     birinciSayi = float(input("Birinci sayıyı giriniz: "))
     ikinciSayi = float(input("İkinci sayıyı giriniz: "))
-    #Kontrol yapılabilmesi için none değeri atanır
-    sonuc = None
-    #Seçilen işleme göre kullanıcıdan alınan değerler işlenir
-    if yapilacakIslem == "1" or yapilacakIslem == "1.":
-        sonuc = birinciSayi + ikinciSayi
-    elif yapilacakIslem == "2" or yapilacakIslem == "2.":
-        sonuc = birinciSayi - ikinciSayi
-    elif yapilacakIslem == "3" or yapilacakIslem == "3.":
-        sonuc = birinciSayi * ikinciSayi
-    elif yapilacakIslem == "4" or yapilacakIslem == "4.":
-        sonuc = birinciSayi / ikinciSayi
-    elif yapilacakIslem == "5" or yapilacakIslem == "5.":
-        sonuc = birinciSayi % ikinciSayi
-    elif yapilacakIslem == "6" or yapilacakIslem == "6.":
-        sonuc = birinciSayi ** ikinciSayi
-    else: 
-        print("Lütfen işlem numarası seçiniz.")
-    #Hata kontrolü yapılır, hata yok ise kullanıcıya sonuç gösterilir
-    if sonuc != None:
-        print(sonuc)
-    else:
-        print("Bir hata oluştu lütfen tekrar deneyiniz")
+    
+    #İşlemler yapılıp kullanıcıya sunulur
+    toplama = birinciSayi + ikinciSayi
+    cikarma = birinciSayi - ikinciSayi
+    carpma = birinciSayi * ikinciSayi
+    bolme = birinciSayi / ikinciSayi
+    mod = birinciSayi % ikinciSayi
+    us = birinciSayi ** ikinciSayi
+    print(
+f"""Toplama: {toplama}
+Çıkarma: {cikarma}
+Çarpma: {carpma}
+Bölme: {bolme}
+Mod: {mod}
+Üs: {us}
+""")
 elif secilenOdev == "2" or secilenOdev == "2.":    
     #Görev 2: Kullanıcıdan bir sayı alarak 1’den o sayıya kadar olan sayıların toplamını hesaplayan bir Python programı yazın. (For veya While döngüsü kullanın.)
     #Kullanıcıdan sayı alınır
